@@ -1,19 +1,19 @@
-//como recorrer un arreglo
-const arreglo=['alfredo','juan','alvarado','rojas','erika'];
-//para recorrer el arreglo
-//length nos permite decir para saber cuanto mide el arreglo
-console.log(arreglo.length);
-//foor lop para recorrer un arreglo
-//funcion que tiene 3 partes
+//funcion reduce
 
-/**
- * 1 donde va iniciar el recorrido
- * 2 cuantas veces se va a ejecutar el codigo en este caso la cantidad de veces del contenido del arreglo
- * 3 Y la incrementacion de uno en uno 
- */
-for(let i=0;i<arreglo.length;i++){
-    //nuestra variable i nos indica en que posicion del arreglo va
-    console.log(arreglo[i]);//para que se vaya imprimiendo ponemos el nombre del arreglo en la posicion de  [i  ]
-}
+const carrito = [
+    { nombre: 'Monitor 27 Pulgadas', precio: 500 },
+    { nombre: 'Televisión', precio: 100 },
+    { nombre: 'Tablet', precio: 200 },
+    { nombre: 'Audifonos', precio: 300 },
+    { nombre: 'Teclado', precio: 400 },
+    { nombre: 'Celular', precio: 700 },
+];
 
-console.table(arreglo);
+//sumar los precios del carrito y dar un resultado
+let total=0;
+carrito.forEach(producto=> total+=producto.precio)
+console.log(total);
+
+//usamos reduce
+let resultado = carrito.reduce((total,producto)=>total+producto.precio,0);
+console.log(resultado);

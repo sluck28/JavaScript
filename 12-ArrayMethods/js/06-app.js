@@ -1,24 +1,11 @@
-//CREAR UN NUEVO ARREGLO CON SPREAD OPERATOR
-const carrito=[];
-//definir un producto
-const producto={
-    nombre: 'Laptop',
-    precio: 1000,
-    stock: 100,
-    descuento: 10
-}
-const producto2={
-    nombre: 'Celular',
-    precio: 1000,
-    stock: 100,
-    descuento: 10
-}
-//forma declarativa
-
-//desde esta forma podemos hacer un spread operator
-resultado=[...carrito,producto];
-resultado=[...resultado,producto2];
-
-
-
-console.table(resultado);
+const carrito = [
+    { nombre: 'Monitor 27 Pulgadas', precio: 500 },
+    { nombre: 'Televisión', precio: 100 },
+    { nombre: 'Tablet', precio: 200 },
+    { nombre: 'Audifonos', precio: 300 },
+    { nombre: 'Teclado', precio: 400 },
+    { nombre: 'Celular', precio: 700 },
+];
+//every todos deben de cumplir la condicion
+const resultado = carrito.every(producto => producto.precio<500);
+console.log(resultado);

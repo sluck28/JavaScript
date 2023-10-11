@@ -1,27 +1,25 @@
-//METODOS DEL ARREGLO PARA AGREGAR DATOS AL ARREGLO
-const arreglo=['alfredo','juan','alvarado','rojas','erika'];
-const nombres=['Karen','Lizbeth','Martinez']
-//push agrega al final del arreglo
-arreglo.push(nombres);
-console.log(arreglo);
+//find
+const carrito = [
+    { nombre: 'Monitor 27 Pulgadas', precio: 500 },
+    { nombre: 'Televisión', precio: 100 },
+    { nombre: 'Tablet', precio: 200 },
+    { nombre: 'Audifonos', precio: 300 },
+    { nombre: 'Teclado', precio: 400 },
+    { nombre: 'Celular', precio: 700 },
+];
 
-const carrito=[];
-//definir un producto
-const producto={
-    nombre: 'Laptop',
-    precio: 1000,
-    stock: 100,
-    descuento: 10
-}
-const producto2={
-    nombre: 'Celular',
-    precio: 1000,
-    stock: 100,
-    descuento: 10
-}
-//push agrega datos al final del arreglo
-carrito.push(producto);
-//unshift al inicio del arreglo
-carrito.unshift(producto2);
+//con un foreach
+let resultado;
 
-console.table(carrito);
+carrito.forEach((producto,i)=>{
+    if(producto.nombre==='Tablet'){
+        resultado=carrito[i];
+    }
+});
+
+console.log(resultado);
+
+//con find
+
+const resultado2=carrito.find(producto =>producto.nombre==='Tablet');
+console.log(resultado2);

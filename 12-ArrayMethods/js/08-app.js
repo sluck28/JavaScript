@@ -1,12 +1,21 @@
-//DESTRUCTURING PARA ARREGLOS
+//Spread Operator
+const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
+ 
+let resultado=[...meses,'Agosto'];
+console.log(resultado);
 
-//Destructuring en arreglos
-const numeros=[1,2,3,5,6];
-//podemos llamarlo como sea en un destructuring de arreglos
-const [primero,segundo]=numeros;
-console.log('posicion [1]',primero,'posicion [2]',segundo);
+const carrito = [
+    { nombre: 'Monitor 27 Pulgadas', precio: 500 },
+    { nombre: 'Televisión', precio: 100 },
+    { nombre: 'Tablet', precio: 200 },
+    { nombre: 'Audifonos', precio: 300 },
+    { nombre: 'Teclado', precio: 400 },
+    { nombre: 'Celular', precio: 700 },
+];
 
+//spread operator con arreglos de un objeto
 
-//para acceder a alguna posicion en especifico del arreglo pondremos , para decir que no se quiere acceder
-const [ , , tercero]=numeros;
-console.log('posicion [3]',tercero);
+const producto={producto:'Disco duro',precio:1000};
+
+const carrito2=[...carrito,producto];
+console.log(carrito2);
