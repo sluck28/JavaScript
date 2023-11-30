@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const btnReset = document.querySelector("#formulario button[type='reset']");
   const spinner = document.querySelector("#spinner");
+
+
   const email = {
     email: "",
     asunto: "",
     mensaje: "",
   };
 
-  console.log(email);
+ 
   //registrar un evento a los inputs
   inputEmail.addEventListener("blur", validar);
   //otra forma de mandar a llmar la funcion
@@ -84,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (e.target.id === "email" && !validarEmail(e.target.value)) {
-      mostrarAlerta("EL email no es valido", e.target.parentElement);
+      mostrarAlerta("El email no es valido", e.target.parentElement);
       email[e.target.name] = "";
       comprobarEmail();
       return;
